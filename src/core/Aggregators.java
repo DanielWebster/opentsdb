@@ -15,7 +15,7 @@ package net.opentsdb.core;
 import java.util.HashMap;
 import java.util.NoSuchElementException;
 import java.util.Set;
-import org.apache.commons.math;
+import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 /**
  * Utility class that provides common, generally useful aggregators.
