@@ -69,12 +69,16 @@ public final class Aggregators {
    * if timestamps don't line up instead of interpolating. */
   public static final Aggregator MIMMAX = new Max(
       Interpolation.MIN, "mimmax");
+	  
+  /** Aggregator that sums up all the data points. */
+  public static final Aggregator PERCENTILE = new Percentile(
+      Interpolation.LERP, "percentile");
   
   /** Maps an aggregator name to its instance. */
   private static final HashMap<String, Aggregator> aggregators;
 
   static {
-    aggregators = new HashMap<String, Aggregator>(9);
+    aggregators = new HashMap<String, Aggregator>(10);
     aggregators.put("count", COUNT);
     aggregators.put("sum", SUM);
     aggregators.put("min", MIN);
@@ -84,6 +88,7 @@ public final class Aggregators {
     aggregators.put("zimsum", ZIMSUM);
     aggregators.put("mimmin", MIMMIN);
     aggregators.put("mimmax", MIMMAX);
+	aggregators.put("percentile", MIMMAX);
   }
 
   private Aggregators() {
