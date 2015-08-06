@@ -70,7 +70,7 @@ public final class Aggregators {
   public static final Aggregator MIMMAX = new Max(
       Interpolation.MIN, "mimmax");
 	  
-  /** Aggregator that sums up all the data points. */
+  /** Aggregator that retrieves a given percentile. */
   public static final Aggregator PERCENTILE = new Percentile(
       Interpolation.LERP, "percentile");
   
@@ -88,7 +88,7 @@ public final class Aggregators {
     aggregators.put("zimsum", ZIMSUM);
     aggregators.put("mimmin", MIMMIN);
     aggregators.put("mimmax", MIMMAX);
-	aggregators.put("percentile", MIMMAX);
+    aggregators.put("percentile", PERCENTILE);
   }
 
   private Aggregators() {
