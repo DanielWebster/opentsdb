@@ -140,7 +140,8 @@ tsdb_DEPS = \
 	$(PROTOBUF)	\
 	$(SLF4J_API)	\
 	$(SUASYNC)	\
-	$(ZOOKEEPER)
+	$(ZOOKEEPER)	\
+	$(COMMONS_MATH3)
 
 test_SRC := \
 	test/core/SeekableViewsForTest.java \
@@ -618,6 +619,7 @@ pom.xml: pom.xml.in Makefile
 	    -e 's/@SLF4J_API_VERSION@/$(SLF4J_API_VERSION)/' \
 	    -e 's/@SUASYNC_VERSION@/$(SUASYNC_VERSION)/' \
 	    -e 's/@ZOOKEEPER_VERSION@/$(ZOOKEEPER_VERSION)/' \
+	    -e 's/@COMMONS_MATH3_VERSION@/$(COMMONS_MATH3_VERSION)/' \
 	    -e 's/@spec_title@/$(spec_title)/' \
 	    -e 's/@spec_vendor@/$(spec_vendor)/' \
 	    -e 's/@spec_version@/$(PACKAGE_VERSION)/' \
